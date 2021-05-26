@@ -1,0 +1,20 @@
+<ToDoListScreen>:
+    list_view: list_view
+    Screen:
+        MDBoxLayout:
+            spacing: dp(10)
+            orientation: "vertical"
+            MDToolbar:
+                title: "To do list"
+                pos_hint: {'top': 1}
+
+            ScrollView:
+                MDList:
+                    id: list_view
+
+            MDBottomAppBar:
+                MDToolbar:
+                    icon: 'plus'
+                    type: 'bottom'
+                    mode: 'center'
+                    on_action_button: root.addList()
